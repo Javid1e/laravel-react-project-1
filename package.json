@@ -1,8 +1,14 @@
 {
+    "name": "buy-and-sell-questions",
+    "homepage": "https://Javid1e.github.io/buy-and-sell-questions",
+    "version": "0.1.0",
     "private": true,
     "scripts": {
         "dev": "vite",
-        "build": "vite build"
+        "build": "vite build",
+        "predeploy": "yarn run build",
+        "deploy": "gh-pages -d build",
+        "clean": "gh-pages-clean"
     },
     "devDependencies": {
         "@popperjs/core": "^2.11.6",
