@@ -148,7 +148,6 @@ $im-no-media-expressions: ('screen', 'portrait', 'landscape') !default;
 
 ////
 /// Cross-engine logging engine
-/// @author Hugo Giraudel
 /// @access private
 ////
 
@@ -225,7 +224,6 @@ $im-no-media-expressions: ('screen', 'portrait', 'landscape') !default;
 
 ////
 /// Parsing engine
-/// @author Hugo Giraudel
 /// @access private
 ////
 
@@ -374,7 +372,6 @@ $im-no-media-expressions: ('screen', 'portrait', 'landscape') !default;
 
 ////
 /// String to number converter
-/// @author Hugo Giraudel
 /// @access private
 ////
 
@@ -449,7 +446,6 @@ $im-no-media-expressions: ('screen', 'portrait', 'landscape') !default;
 /// configuration such as custom breakpoints (referred to as tweakpoints)
 /// for instance.
 ///
-/// @author Hugo Giraudel
 ///
 /// @param {Map} $tweakpoints [()] - Map of tweakpoints to be merged with `$breakpoints`
 /// @param {Map} $tweak-media-expressions [()] - Map of tweaked media expressions to be merged with `$media-expression`
@@ -499,7 +495,6 @@ $im-no-media-expressions: ('screen', 'portrait', 'landscape') !default;
 
 ////
 /// include-media public exposed API
-/// @author Eduardo Boucas
 /// @access public
 ////
 
