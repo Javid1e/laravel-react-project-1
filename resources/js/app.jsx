@@ -1,5 +1,5 @@
 
-import '../../public/build/assets/style-e05f5d5c.css'
+import '../../public/build/assets/style-42d4f178.css'
 
 import ReactDOM from 'react-dom/client';
 import LayoutDefault from './Layouts/LayoutDefault';

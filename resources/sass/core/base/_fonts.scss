@@ -125,13 +125,13 @@
 @if ( $font--provider == 'IranSans' ) {
     @font-face {
         font-family: 'IranSans';
-        src: url("../../Fonts/IranSans/fonts/ttf/IRANSansWeb.ttf");
+        src: url("../../Fonts/IranSans/ttf/IRANSansWeb.ttf");
     }
 }
 @if ( $font--provider == 'YekanBakh' ) {
     @font-face {
-        font-family: 'IranYekan';
-        src: url("../../Fonts/IranYekan/IRANYekanMobileRegular.ttf");
+        font-family: 'YekanBakh';
+        src: url("../../Fonts/YekanBakh/ttf/YekanBakh.ttf");
     }
 }
 
