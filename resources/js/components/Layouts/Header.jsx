@@ -85,7 +85,7 @@ const Header = ({
                         'site-header-inner',
                         bottomDivider && 'has-bottom-divider'
                     )}>
-                    <Logo />
+
                     {!hideNav &&
                         <>
                             <button
@@ -112,28 +112,28 @@ const Header = ({
                                             navPosition && `header-nav-${navPosition}`
                                         )}>
                                         <li>
-                                            <Link to="#0" onClick={closeMenu}>خانه</Link>
+                                            <a to="#0" onClick={closeMenu}>خانه</a>
                                         </li>
                                         <li>
-                                            <Link to="#0" onClick={closeMenu}>تبلیغ نگار</Link>
+                                            <a to="#0" onClick={closeMenu}>تبلیغ نگار</a>
                                         </li>
                                         <li>
-                                            <Link to="#0" onClick={closeMenu}>امکانات</Link>
+                                            <a to="#0" onClick={closeMenu}>امکانات</a>
                                         </li>
                                         <li>
-                                            <Link to="#0" onClick={closeMenu}>سرویس ها</Link>
+                                            <a to="#0" onClick={closeMenu}>سرویس ها</a>
                                         </li>
                                         <li>
-                                            <Link to="#0" onClick={closeMenu}>گالری</Link>
+                                            <a to="#0" onClick={closeMenu}>گالری</a>
                                         </li>
                                         <li>
-                                            <Link to="#0" onClick={closeMenu}>بازخورد ها</Link>
+                                            <a to="#0" onClick={closeMenu}>بازخورد ها</a>
                                         </li>
                                         <li>
-                                            <Link to="#0" onClick={closeMenu}>تیم تبلیغ نگار</Link>
+                                            <a to="#0" onClick={closeMenu}>تیم تبلیغ نگار</a>
                                         </li>
                                         <li>
-                                            <Link to="#0" onClick={closeMenu}>تماس با ما</Link>
+                                            <a to="#0" onClick={closeMenu}>تماس با ما</a>
                                         </li>
                                     </ul>
                                     {!hideSignin &&
@@ -141,7 +141,7 @@ const Header = ({
                                             className="list-reset header-nav-right"
                                         >
                                             <li>
-                                                <Link to="#0" className="button button-primary button-wide-mobile button-sm" onClick={closeMenu}>ورود</Link>
+                                                <a to="#0" className="button button-primary button-wide-mobile button-sm" onClick={closeMenu}>ورود</a>
                                             </li>
                                         </ul>}
                                 </div>
