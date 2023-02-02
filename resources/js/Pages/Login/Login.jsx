@@ -80,74 +80,68 @@ export default function Login() {
 
     return (
         <>
-            <LayoutDefault>
-                {loading ? (
-                    <p>Loading ...</p>
-                ) : (
-                    <div className="body-wrap m-64 ">
-                        <FormHint status="enabled" className="container-sm">
-                            <h1
-                                className="text-color-secondary ta-c mt-0 mb-16 reveal-from-bottom"
-                                data-reveal-delay="200"
-                            >
-                                ورود
-                            </h1>
-                            <form method="post" onSubmit={handleLogin}>
-                                <Input
-                                    className="mt-24"
-                                    value={username}
-                                    onChange={(e) =>
-                                        setUsername(e.target.value)
-                                    }
-                                    type="text"
-                                    placeholder="نام کاربری"
-                                    required="required"
-                                />
-                                <Input
-                                    className="mt-24"
-                                    value={password}
-                                    onChange={(e) =>
-                                        setPassword(e.target.value)
-                                    }
-                                    type="password"
-                                    placeholder="رمز عبور"
-                                    required="required"
-                                />
-                                <p>
-                                    <span
-                                        className="link"
-                                        style={{ marginLeft: ".5rem" }}
-                                        onClick={gotoSignUpPage}
-                                    >
-                                        ثبت نام
-                                    </span>
-                                    |
-                                    <span
-                                        className="link"
-                                        style={{ marginRight: ".5rem" }}
-                                        onClick={gotoSignUpPage}
-                                    >
-                                        فراموشی رمز عبور
-                                    </span>
-                                </p>
-                                <ButtonGroup>
-                                    <Button
-                                        type="submit"
-                                        color="primary"
-                                        wideMobile
-                                    >
-                                        ورود
-                                    </Button>
+            {loading ? (
+                <p>Loading ...</p>
+            ) : (
+                <div className="auth-wrapper ">
+                    <div className="auth-forms text-center">
+                        <h3
+                            className="text-color-secondary ta-c mt-0 mb-16 reveal-from-bottom"
+                            data-reveal-delay="200"
+                        >
+                            ورود به سوال چی
+                        </h3>
+                        <form method="post" onSubmit={handleLogin}>
+                            <Input
+                                className="mt-24"
+                                value={username}
+                                onChange={(e) => setUsername(e.target.value)}
+                                type="text"
+                                placeholder="نام کاربری"
+                                required="required"
+                            />
+                            <Input
+                                className="mt-24"
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
+                                type="password"
+                                placeholder="رمز عبور"
+                                required="required"
+                            />
+                            <p>
+                                <span
+                                    className="link"
+                                    style={{ marginLeft: ".5rem" }}
+                                    onClick={gotoSignUpPage}
+                                >
+                                    ثبت نام
+                                </span>
+                                |
+                                <span
+                                    className="link"
+                                    style={{ marginRight: ".5rem" }}
+                                    onClick={gotoSignUpPage}
+                                >
+                                    فراموشی رمز عبور
+                                </span>
+                            </p>
+                            <ButtonGroup className="button-group">
+                                <Button
+                                    type="submit"
+                                    color="primary"
+                                    wideMobile
+                                >
+                                    ورود
+                                </Button>
 
-                                    <Button color="primary" wideMobile>
-                                        <Link to="/">بازگشت</Link>
-                                    </Button>
-                                </ButtonGroup>
-                            </form>
-                        </FormHint>
+                                <Button color="primary" wideMobile>
+                                    <Link to="/">بازگشت</Link>
+                                </Button>
+                            </ButtonGroup>
+                        </form>
                     </div>
-                )}
-            </LayoutDefault>
+                </div>
+            )}
         </>
     );
 }
