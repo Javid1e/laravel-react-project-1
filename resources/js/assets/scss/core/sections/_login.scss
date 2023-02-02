@@ -13,3 +13,50 @@
 .auth-wrapper .auth-forms button {
     width: 100%;
 }
+.cmp-field .cmp-field-border {
+    border: solid 1px var(--bs-gray-100) !important;
+}
+input.cmp-field,
+textarea.cmp-field {
+    display: block;
+    width: 100%;
+    background-color: #fff;
+    background-clip: padding-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+.cmp-field:not(label) {
+    background: #fff;
+}
+.cmp-field:not(label) {
+    border-radius: 0.85rem;
+}
+.cmp-field button,
+.cmp-field input,
+.cmp-field optgroup,
+.cmp-field select,
+.cmp-field textarea,
+button.cmp-field,
+input.cmp-field,
+optgroup.cmp-field,
+select.cmp-field,
+textarea.cmp-field {
+    font-family: inherit;
+    padding: 0.85rem 1.5rem 0.7rem 1.5rem;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.8;
+}
+.cmp-field {
+    overflow: hidden;
+}
+.auth-wrapper .auth-forms button {
+    width: 100%;
+}
+.cmp-btn-def.btn-sm {
+    font-size: 16px;
+    padding: 0.25rem 1.5rem 0.1rem 1.5rem;
+    line-height: 40px;
+    border-radius: 1rem;
+}

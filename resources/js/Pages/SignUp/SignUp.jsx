@@ -23,12 +23,18 @@ const Signup = () => {
     const gotoLoginPage = () => navigate("/Login");
     const gotoHomePage = () => navigate("/");
     return (
-        <LayoutDefault>
-            <div className="body-wrap m-64 ">
-                <h2>Sign up </h2>
-                <form className="signup__form" onSubmit={handleSubmit}>
-                    <FormLabel htmlFor="email">Email Address</FormLabel>
+        <div className="auth-wrapper">
+            <div className="auth-forms text-center">
+                <h3
+                    className="text-color-secondary ta-c reveal-from-bottom"
+                    data-reveal-delay="200"
+                >
+                    ثبت نام در سوال چی
+                </h3>
+                <form className="auth-form cmp-form" onSubmit={handleSubmit}>
+                    <FormLabel htmlFor="email">ایمیل</FormLabel>
                     <Input
+                        className="cmp-field cmp-field-border mt-4 "
                         type="email"
                         name="email"
                         id="email"
@@ -36,8 +42,9 @@ const Signup = () => {
                         required
                         onChange={(e) => setEmail(e.target.value)}
                     />
-                    <FormLabel htmlFor="username">Username</FormLabel>
+                    <FormLabel htmlFor="username">نام کاربری</FormLabel>
                     <Input
+                        className="cmp-field cmp-field-border mt-4 "
                         type="text"
                         id="username"
                         name="username"
@@ -45,8 +52,9 @@ const Signup = () => {
                         required
                         onChange={(e) => setUsername(e.target.value)}
                     />
-                    <FormLabel htmlFor="tel">Phone Number</FormLabel>
+                    <FormLabel htmlFor="tel">تلفن همراه</FormLabel>
                     <Input
+                        className="cmp-field cmp-field-border mt-4 "
                         type="tel"
                         name="tel"
                         id="tel"
@@ -54,8 +62,9 @@ const Signup = () => {
                         required
                         onChange={(e) => setTel(e.target.value)}
                     />
-                    <FormLabel htmlFor="tel">Password</FormLabel>
+                    <FormLabel htmlFor="tel">رمز عبور</FormLabel>
                     <Input
+                        className="cmp-field cmp-field-border mt-4"
                         type="password"
                         name="password"
                         id="password"
@@ -65,7 +74,7 @@ const Signup = () => {
                         onChange={(e) => setPassword(e.target.value)}
                     />
 
-                    <p>
+                    <p className="mt-8">
                         <span style={{ marginLeft: ".5rem" }}>
                             حساب کاربری دارید ؟
                         </span>
@@ -73,21 +82,24 @@ const Signup = () => {
                             ورود
                         </span>
                     </p>
-                    <ButtonGroup>
-                        <Button type="submit" color="primary" wideMobile>
-                            ثبت نام
-                        </Button>
-                        <Button
-                            color="primary"
-                            wideMobile
-                            onClick={gotoHomePage}
-                        >
-                            بازگشت
-                        </Button>
-                    </ButtonGroup>
+
+                    <Button
+                        className="cmp-btn-def btn-sm btn-primary register-btn mt-8"
+                        type="submit"
+                        color="primary"
+                    >
+                        ثبت نام
+                    </Button>
+                    <Button
+                        className="cmp-btn-def btn-sm btn-primary register-btn mt-8"
+                        color="primary"
+                        onClick={gotoHomePage}
+                    >
+                        بازگشت
+                    </Button>
                 </form>
             </div>
-        </LayoutDefault>
+        </div>
     );
 };
 

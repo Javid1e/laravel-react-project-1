@@ -91,9 +91,13 @@ export default function Login() {
                         >
                             ورود به سوال چی
                         </h3>
-                        <form method="post" onSubmit={handleLogin}>
+                        <form
+                            className="auth-form cmp-form "
+                            method="post"
+                            onSubmit={handleLogin}
+                        >
                             <Input
-                                className="mt-24"
+                                className="cmp-field cmp-field-border mt-16 mb-16"
                                 value={username}
                                 onChange={(e) => setUsername(e.target.value)}
                                 type="text"
@@ -101,16 +105,16 @@ export default function Login() {
                                 required="required"
                             />
                             <Input
-                                className="mt-24"
+                                className="cmp-field cmp-field-border mt-16"
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
                                 type="password"
                                 placeholder="رمز عبور"
                                 required="required"
                             />
-                            <p>
+                            <p className="mt-16">
                                 <span
-                                    className="link"
+                                    className="link "
                                     style={{ marginLeft: ".5rem" }}
                                     onClick={gotoSignUpPage}
                                 >
@@ -125,19 +129,23 @@ export default function Login() {
                                     فراموشی رمز عبور
                                 </span>
                             </p>
-                            <ButtonGroup className="button-group">
-                                <Button
-                                    type="submit"
-                                    color="primary"
-                                    wideMobile
-                                >
-                                    ورود
-                                </Button>
 
-                                <Button color="primary" wideMobile>
-                                    <Link to="/">بازگشت</Link>
-                                </Button>
-                            </ButtonGroup>
+                            <Button
+                                className="cmp-btn-def btn-sm btn-primary register-btn mt-16"
+                                btn-primary
+                                register-btn
+                                type="submit"
+                                color="primary"
+                            >
+                                ورود
+                            </Button>
+
+                            <Button
+                                className="cmp-btn-def btn-sm btn-primary register-btn mt-16"
+                                color="primary"
+                            >
+                                <Link to="/">بازگشت</Link>
+                            </Button>
                         </form>
                     </div>
                 </div>
