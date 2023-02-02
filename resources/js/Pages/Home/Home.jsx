@@ -5,6 +5,7 @@ import Header from '../../components/layout/Header';
 import Footer from '../../components/layout/Footer';
 import Cart from "../../components/layout/partials/Cart/Cart";
 import CartProvider from "../../store/CartProvider";
+import LayoutDefault from "../../layouts/LayoutDefault";
 const Home = () => {
   const [cartIsShown, setCartIsShown] = useState(false);
 
@@ -16,14 +17,9 @@ const Home = () => {
     setCartIsShown(false);
   };
   return (<>
-    <CartProvider>
-      {cartIsShown && <Cart onClose={hideCartHandler} />}
-      <Header navPosition="right" className="reveal-from-bottom" />
-      <main className="site-content">
-        <Hero className="illustration-section-01" />
-      </main>
-      <Footer />
-    </CartProvider>
+    <LayoutDefault>
+      <Hero className="illustration-section-01" />
+    </LayoutDefault>
   </>)
 
 };
