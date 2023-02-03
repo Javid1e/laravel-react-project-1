@@ -32,7 +32,8 @@ const fetchCurrentUserInfo = (token) => {
 export default function Login() {
     const navigate = useNavigate();
     const gotoSignUpPage = () => navigate("/Register");
-    const gotoForgetPass = () => navigate("/ForgetPass");
+    const gotoForgetPassEmailPage = () => navigate("/RecoverWithEmail");
+    const gotoHomePage = () => navigate("/");
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [token, setToken] = useState(null);
@@ -124,7 +125,7 @@ export default function Login() {
                                 <span
                                     className="link"
                                     style={{ marginRight: ".5rem" }}
-                                    onClick={gotoSignUpPage}
+                                    onClick={gotoForgetPassEmailPage}
                                 >
                                     فراموشی رمز عبور
                                 </span>
@@ -141,10 +142,11 @@ export default function Login() {
                             </Button>
 
                             <Button
-                                className="cmp-btn-def btn-sm btn-primary register-btn mt-16"
+                                className="cmp-btn-def btn-sm btn-primary register-btn mt-8"
                                 color="primary"
+                                onClick={gotoHomePage}
                             >
-                                <Link to="/">بازگشت</Link>
+                                بازگشت
                             </Button>
                         </form>
                     </div>

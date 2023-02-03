@@ -5,7 +5,7 @@ import styles from "./Cart.module.css";
 import Modal from "../../../elements/Modal";
 const Cart = (props) => {
     const cartCtx = useContext(CartContext);
-    const totalAmount = `$${cartCtx.totalAmount.toFixed(2)}`;
+    const totalAmount = `${cartCtx.totalAmount.toFixed(2)} تومان `;
     const hasItems = cartCtx.items.length > 0;
     const cartItemRemoveHandler = (id) => {
         cartCtx.removeItem(id);
@@ -20,6 +20,7 @@ const Cart = (props) => {
                 <CartItem
                     key={item.id}
                     name={item.name}
+                    grade={item.grade}
                     amount={item.amount}
                     price={item.price}
                     onRemove={cartItemRemoveHandler.bind(null, item.id)}
@@ -32,14 +33,17 @@ const Cart = (props) => {
         <Modal onClose={props.onClose}>
             {cartItem}
             <div className={styles.total}>
-                <span>Total Amout</span>
+                <span>مبلغ قابل پرداخت</span>
                 <span>{totalAmount}</span>
             </div>
             <div className={styles.actions}>
-                <button className={`${styles["button--alt"]}`} onClick={props.onClose}>
-                    Close
+                <button
+                    className={`${styles["button--alt"]}`}
+                    onClick={props.onClose}
+                >
+                    بستن
                 </button>
-                {hasItems && <button className={styles.button}>Order</button>}
+                {hasItems && <button className={styles.button}>پرداخت</button>}
             </div>
         </Modal>
     );

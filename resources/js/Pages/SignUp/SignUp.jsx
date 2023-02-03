@@ -19,6 +19,7 @@ const Signup = () => {
         setTel("");
         setUsername("");
         setPassword("");
+        navigate("/VerifyEmail");
     };
     const gotoLoginPage = () => navigate("/Login");
     const gotoHomePage = () => navigate("/");
